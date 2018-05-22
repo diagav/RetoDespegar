@@ -24,6 +24,20 @@ Feature: Busqueda de los vuelos mas baratos
       | ciudadorigen | ciudaddestino | ordenarpor |
       | medellin     | cartagena     | Precio     |
 
+  @siningresardestino
+  Scenario Outline: Busqueda sin seleccionar la ciudad destino
+    Given el usuario esta en la pagina de despegar
+    When elige la opcion vuelos
+    And elige ida y vuelta
+    And ingresa ciudad origen <ciudadorigen>
+    And ingresa ciudad destino <ciudaddestino>
+    And elige la opcion buscar
+    Then se muestra mensaje para ingresar el destino
+
+    Examples: 
+      | ciudadorigen | ciudaddestino |
+      | medellin     |          8888 |
+
   @sinfecharegreso
   Scenario Outline: Busqueda sin seleccionar la fecha de regreso
     Given el usuario esta en la pagina de despegar
@@ -38,16 +52,3 @@ Feature: Busqueda de los vuelos mas baratos
     Examples: 
       | ciudadorigen | ciudaddestino |
       | medellin     | cartagena     |
-
-  @siningresardestino
-  Scenario Outline: Busqueda sin seleccionar la ciudad destino
-    Given el usuario esta en la pagina de despegar
-    When elige la opcion vuelos
-    And elige ida y vuelta
-    And ingresa ciudad origen <ciudadorigen>
-    And elige la opcion buscar
-    Then se muestra mensaje para ingresar el destino
-
-    Examples: 
-      | ciudadorigen |
-      | medellin     |

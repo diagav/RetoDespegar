@@ -19,8 +19,8 @@ public class HomePage {
     	Thread.sleep(4000);
     	driver.findElement(By.xpath("//*[@id=\"searchbox-sbox-all-boxes\"]/div/div/div/div/div/form/span/label/span[contains(text(),'Ida y vuelta')]")).click();
  
-    	driver.findElement(By.xpath("//*[@id=\"searchbox-sbox-all-boxes\"]/div/div/div/div/div/div/div/div/div/div/div/div/input[@placeholder=\"Ingresa desde dónde viajas\"]")).clear();
-        driver.findElement(By.xpath("//*[@id=\"searchbox-sbox-all-boxes\"]/div/div/div/div/div/div/div/div/div/div/div/div/div/input[@placeholder=\"Ingresa hacia dónde viajas\"]")).clear();
+    	//driver.findElement(By.xpath("//*[@id=\"searchbox-sbox-all-boxes\"]/div/div/div/div/div/div/div/div/div/div/div/div/input[@placeholder=\"Ingresa desde dónde viajas\"]")).clear();
+        //driver.findElement(By.xpath("//*[@id=\"searchbox-sbox-all-boxes\"]/div/div/div/div/div/div/div/div/div/div/div/div/div/input[@placeholder=\"Ingresa hacia dónde viajas\"]")).clear();
      
     	
     }
