@@ -1,6 +1,6 @@
 # Automatización búsqueda de vuelos Despegar.com
 
-Buscar los 10 precios más baratos de tiquetes en el siguiente enlace: https://www.despegar.com.co/   
+Buscar los 10 precios más baratos de tiquetes en el siguiente enlace: https://www.despegar.com.co  
 Origen: Medellín   
 Destino: Cartagena  
 Viajeros: dos personas   
