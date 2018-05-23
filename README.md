@@ -70,5 +70,3 @@ ChromeDriver 2.36.540470
 ## Conclusiones de la automatizacion
 - Se logró automatizar la solicitud de acuerdo a las indicaciones dadas    
 - Fue una buena oportunidad para afianzar los conocimientos recibidos en la capacitación.  
-
-
