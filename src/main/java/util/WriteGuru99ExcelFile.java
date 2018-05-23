@@ -77,7 +77,7 @@ public class WriteGuru99ExcelFile {
 
 		//se cambia el color... 
 		sheet.getRow(1).getCell(1).setCellStyle(style);
-
+//
 		// Create a loop over the cell of newly created Row
 
 		for (int j = 0; j < row.getLastCellNum(); j++) {
