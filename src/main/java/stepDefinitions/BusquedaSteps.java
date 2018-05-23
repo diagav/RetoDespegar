@@ -3,8 +3,6 @@ package stepDefinitions;
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
-import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
@@ -30,27 +28,17 @@ public class BusquedaSteps {
 
 	@Given("el usuario esta en la pagina de despegar")
 	public void usuarioIngresaPaginaDespegar() throws InterruptedException {
-
 		driver.get("https://www.despegar.com.co");
 
 		Thread.sleep(2000);
-//		if (driver.findElements(By.xpath("/html/body/div/div/div/span[@class=\"as-login-close as-login-icon-close-circled\"]")).size() != 0) {
-//			driver.findElement(By.xpath("/html/body/div/div/div/span[@class=\"as-login-close as-login-icon-close-circled\"]")).click();
-//		}
 
 		try {
 			if (driver.findElements(By.xpath("/html/body/div/div/div/span[@class=\"as-login-close as-login-icon-close-circled\"]")).size() != 0) {
 				driver.findElement(By.xpath("/html/body/div/div/div/span[@class=\"as-login-close as-login-icon-close-circled\"]")).click();
-				//driver.findElement(By.xpath("/html/body/div[16]/div/div[1]/span")).click();
-				//driver.findElement(By.xpath("/html/body/div/div/div/span[@class=\\\"as-login-close as-login-icon-close-circled\\\"]")).click(); // Cierro la ventana modal
-				//startpage.opcionVuelo();
 			}
 		} catch (ElementNotVisibleException e) {
-			//NoSuchElementException
-			//startpage.opcionVuelo();
-			//ElementNotVisibleException
-		}
 
+		}
 	}
 
 	@When("elige la opcion vuelos")
