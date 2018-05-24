@@ -27,10 +27,15 @@ public class VuelosPage {
     	
     	GrabaExcel ayudaExcel;
     	ayudaExcel = new GrabaExcel();
- 
-    	String aerolinea = driver.findElement(By.xpath("//*[@id='clusters']/span[1]/span/cluster/div/div/span/div/div/span[1]/route-choice/ul/li[1]/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
-        String precio; 
-                
+    	 
+        String precio;
+        String ruta = "C:\\Users\\diagavir\\eclipse-workspace\\RetoDespegar";
+        String libro = "BusquedaDespegar.xls";
+        String hoja = "Hoja1"; 
+        
+        String aerolinea = driver.findElement(By.xpath("//*[@id='clusters']/span[1]/span/cluster/div/div/span/div/div/span[1]/route-choice/ul/li[1]/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
+        
+        //Primer vuelo
     	if (driver.findElements(By.xpath("//*[@id=\'clusters\']/span[1]/span/cluster/div/div/span/fare/span/span/div[1]/item-fare/p/span/flights-price/span/flights-price-element/span/span/em/span[2]")).size() != 0) {
     		precio = driver.findElement(By.xpath("//*[@id=\'clusters\']/span[1]/span/cluster/div/div/span/fare/span/span/div[1]/item-fare/p/span/flights-price/span/flights-price-element/span/span/em/span[2]")).getText();
 		} else {
@@ -38,10 +43,11 @@ public class VuelosPage {
 		}
     		   	
     	String [] datosInsertar= {aerolinea, precio};    	
-    	ayudaExcel.writeExcel("C:\\Users\\diagavir\\eclipse-workspace\\RetoDespegar", "UserLogin.xls", "Hoja1", datosInsertar);
+    	ayudaExcel.escribeExcel(ruta, libro, hoja, datosInsertar);
 
     	//Segundo vuelo 
     	String aerolinea2 = driver.findElement(By.xpath("//*[@id=\'clusters\']/span[2]/span/cluster/div/div/span/div/div/span[1]/route-choice/ul/li/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
+    	
     	if (driver.findElements(By.xpath("//*[@id=\'clusters\']/span[2]/span/cluster/div/div/span/fare/span/span/div[1]/item-fare/p/span/flights-price/span/flights-price-element/span/span/em/span[2]")).size() != 0) {
         	precio = driver.findElement(By.xpath("//*[@id=\'clusters\']/span[2]/span/cluster/div/div/span/fare/span/span/div[1]/item-fare/p/span/flights-price/span/flights-price-element/span/span/em/span[2]")).getText();
 		} else {
@@ -49,7 +55,7 @@ public class VuelosPage {
 		}
     	
     	String [] datosInsertar2= {aerolinea2, precio};    	
-    	ayudaExcel.writeExcel("C:\\Users\\diagavir\\eclipse-workspace\\RetoDespegar", "UserLogin.xls", "Hoja1", datosInsertar2);
+    	ayudaExcel.escribeExcel(ruta, libro, hoja, datosInsertar2);
     	
        	//Tercer vuelo
     	String aerolinea3 = driver.findElement(By.xpath("//*[@id=\'clusters\']/span[3]/span[1]/cluster/div/div/span/div/div/span[1]/route-choice/ul/li[1]/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
@@ -61,7 +67,7 @@ public class VuelosPage {
 		}
     	
     	String [] datosInsertar3= {aerolinea3, precio};    	
-    	ayudaExcel.writeExcel("C:\\Users\\diagavir\\eclipse-workspace\\RetoDespegar", "UserLogin.xls", "Hoja1", datosInsertar3);
+    	ayudaExcel.escribeExcel(ruta, libro, hoja, datosInsertar3);
     	
      	//Cuarto vuelo
     	String aerolinea4 = driver.findElement(By.xpath("//*[@id=\'clusters\']/span[4]/span/cluster/div/div/span/div/div/span[1]/route-choice/ul/li[1]/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
@@ -72,7 +78,7 @@ public class VuelosPage {
 		}
     	
     	String [] datosInsertar4= {aerolinea4, precio};    	
-    	ayudaExcel.writeExcel("C:\\Users\\diagavir\\eclipse-workspace\\RetoDespegar", "UserLogin.xls", "Hoja1", datosInsertar4);
+    	ayudaExcel.escribeExcel(ruta, libro, hoja, datosInsertar4);
     	
      	//Quinto vuelo
     	String aerolinea5 = driver.findElement(By.xpath("//*[@id=\'clusters\']/span[5]/span/cluster/div/div/span/div/div/span[1]/route-choice/ul/li/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
@@ -83,7 +89,7 @@ public class VuelosPage {
 		}
     	
     	String [] datosInsertar5= {aerolinea5, precio};    	
-    	ayudaExcel.writeExcel("C:\\Users\\diagavir\\eclipse-workspace\\RetoDespegar", "UserLogin.xls", "Hoja1", datosInsertar5);
+    	ayudaExcel.escribeExcel(ruta, libro, hoja, datosInsertar5);
     	
      	//Sexto vuelo
     	String aerolinea6 = driver.findElement(By.xpath("//*[@id=\'clusters\']/span[6]/span/cluster/div/div/span/div/div/span[1]/route-choice/ul/li/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
@@ -94,7 +100,7 @@ public class VuelosPage {
 		}
     	
     	String [] datosInsertar6= {aerolinea6, precio};    	
-    	ayudaExcel.writeExcel("C:\\Users\\diagavir\\eclipse-workspace\\RetoDespegar", "UserLogin.xls", "Hoja1", datosInsertar6);
+    	ayudaExcel.escribeExcel(ruta, libro, hoja, datosInsertar6);
     	
      	//Septimo vuelo
     	String aerolinea7 = driver.findElement(By.xpath("//*[@id=\'clusters\']/span[7]/span/cluster/div/div/span/div/div/span[1]/route-choice/ul/li/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
@@ -105,7 +111,7 @@ public class VuelosPage {
 		}
     	
     	String [] datosInsertar7= {aerolinea7, precio};    	
-    	ayudaExcel.writeExcel("C:\\Users\\diagavir\\eclipse-workspace\\RetoDespegar", "UserLogin.xls", "Hoja1", datosInsertar7);
+    	ayudaExcel.escribeExcel(ruta, libro, hoja, datosInsertar7);
     }
         
 	public VuelosPage(WebDriver driver) {
