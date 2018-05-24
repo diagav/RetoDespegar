@@ -7,7 +7,7 @@ Viajeros: dos personas
 Fecha Inicio: 01/09/2018   
 Fecha Regreso: 29/09/2018   
 Guardar en Excel los 7 precios más baratos de la primera página del sitio.  
-Marcar en verde el precio más económico.   
+Marcar en verde el precio más económico.  
 
 # Tabla de contenido:
 
