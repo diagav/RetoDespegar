@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import util.WriteGuru99ExcelFile;
+import util.GrabaExcel;
 
 public class VuelosPage {
 	WebDriver driver;
@@ -25,8 +25,8 @@ public class VuelosPage {
     	
     	Thread.sleep(5000);
     	
-    	WriteGuru99ExcelFile ayudaExcel;
-    	ayudaExcel = new WriteGuru99ExcelFile();
+    	GrabaExcel ayudaExcel;
+    	ayudaExcel = new GrabaExcel();
  
     	String aerolinea = driver.findElement(By.xpath("//*[@id='clusters']/span[1]/span/cluster/div/div/span/div/div/span[1]/route-choice/ul/li[1]/route/itinerary/div/span/itinerary-element[2]/span/itinerary-element-airline/span/span/span/span[2]")).getText();
         String precio; 

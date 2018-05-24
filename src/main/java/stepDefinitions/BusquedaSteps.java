@@ -98,14 +98,16 @@ public class BusquedaSteps {
 	}
 
 	@Then("se muestra mensaje de error en las fechas")
-	public void muestraMensajeErrorFechas() {
+	public void muestraMensajeErrorFechas() throws InterruptedException {
 		String resultado = homePage.muestraMensajeErrorFechas();
+		Thread.sleep(2000);
 		assertEquals("Ingresa una fecha de regreso", resultado);
 	}
 
 	@Then("se muestra mensaje para ingresar el destino")
-	public void muestraMensajeErrorDestino() {
+	public void muestraMensajeErrorDestino() throws InterruptedException {
 		String resultado = homePage.muestraMensajeErrorDestino();
+		Thread.sleep(2000);
 		assertEquals("Ingresa un destino", resultado);
 	}
 }

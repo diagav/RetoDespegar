@@ -16,7 +16,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 //import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class WriteGuru99ExcelFile {
+public class GrabaExcel {
 	public void writeExcel(String filePath, String fileName, String sheetName, String[] dataToWrite)
 			throws IOException {
 	
@@ -75,9 +75,6 @@ public class WriteGuru99ExcelFile {
 
 		Row newRow = sheet.createRow(rowCount + 1);
 
-		//se cambia el color... 
-		sheet.getRow(1).getCell(1).setCellStyle(style);
-//
 		// Create a loop over the cell of newly created Row
 
 		for (int j = 0; j < row.getLastCellNum(); j++) {
@@ -88,6 +85,9 @@ public class WriteGuru99ExcelFile {
 			cell.setCellValue(dataToWrite[j]);
 
 		}
+		
+		//SE CAMBIA COLOR
+		sheet.getRow(1).getCell(1).setCellStyle(style);
 
 		// Close input stream
 
@@ -107,22 +107,22 @@ public class WriteGuru99ExcelFile {
 
 	}
 
-	public static void main(String... strings) throws IOException {
-
-		// Create an array with the data in the same order in which you expect to be
-		// filled in excel file
-
-		String[] valueToWrite = { "Mr. E", "Noida" };
-
-		// Create an object of current class
-
-		WriteGuru99ExcelFile objExcelFile = new WriteGuru99ExcelFile();
-
-		// Write the file using file name, sheet name and the data to be filled
-
-		objExcelFile.writeExcel(System.getProperty("user.dir") + "\\src\\excelExportAndFileIO", "ExportExcel.xlsx",
-				"ExcelGuru99Demo", valueToWrite);
-
-	}
+//	public static void main(String... strings) throws IOException {
+//
+//		// Create an array with the data in the same order in which you expect to be
+//		// filled in excel file
+//
+//		String[] valueToWrite = { "Mr. E", "Noida" };
+//
+//		// Create an object of current class
+//
+//		GrabaExcel objExcelFile = new GrabaExcel();
+//
+//		// Write the file using file name, sheet name and the data to be filled
+//
+//		objExcelFile.writeExcel(System.getProperty("user.dir") + "\\src\\excelExportAndFileIO", "ExportExcel.xlsx",
+//				"ExcelGuru99Demo", valueToWrite);
+//
+//	}
 
 }
