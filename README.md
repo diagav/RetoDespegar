@@ -68,5 +68,5 @@ Page Object model, es un patrón de diseño de objeto en Selenium, donde las págin
 ChromeDriver 2.36.540470
 
 ## Conclusiones de la automatizacion
-- Se logró automatizar la solicitud de acuerdo a las indicaciones dadas    
+- Se logró automatizar la solicitud de acuerdo a las indicaciones dadas.      
 - Fue una buena oportunidad para afianzar los conocimientos recibidos en la capacitación.  
